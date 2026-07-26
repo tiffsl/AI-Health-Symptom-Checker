@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your care summary"
+            android:textColor="#153B5B"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="14dp"
+            android:text="Use this guidance to decide your next step, not as a diagnosis."
+            android:textColor="#667085"
+            android:textSize="13sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTriage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView android:id="@+id/tvTriageIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="34sp" />
+                <TextView android:id="@+id/tvTriageLevel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvTriageMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="#FFFFFF" android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvRedFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:background="#FFF1F0"
+            android:padding="14dp"
+            android:textColor="#B42318"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Recommended next step" android:textColor="#153B5B" android:textSize="16sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvNextStep" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="#475467" android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginBottom="8dp" android:text="Get care" android:textColor="#153B5B" android:textSize="18sp" android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCall999"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:backgroundTint="#C62828"
+            android:text="Call emergency services — 999"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnNearbyClinic" android:layout_width="0dp" android:layout_height="54dp" android:layout_weight="1" android:layout_marginEnd="5dp" android:backgroundTint="#DCEEFF" android:text="Nearby clinic" android:textAllCaps="false" android:textColor="#0F4C75" />
+            <Button android:id="@+id/btnNearbyHospital" android:layout_width="0dp" android:layout_height="54dp" android:layout_weight="1" android:layout_marginStart="5dp" android:backgroundTint="#DCEEFF" android:text="Nearby hospital" android:textAllCaps="false" android:textColor="#0F4C75" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPreferredHospital"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#E9EEF5"
+            android:text="Call preferred hospital"
+            android:textAllCaps="false"
+            android:textColor="#344054" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="8dp" android:text="Check details" android:textColor="#153B5B" android:textSize="16sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tvCheckDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_bg" android:padding="14dp" android:textColor="#475467" android:textSize="14sp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="8dp" android:text="Top possible model matches" android:textColor="#153B5B" android:textSize="16sp" android:textStyle="bold" />
+        <LinearLayout android:id="@+id/predictionsContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+
+        <TextView android:id="@+id/tvAnalysedSymptoms" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/card_bg" android:padding="14dp" android:textColor="#475467" android:textSize="12sp" />
+        <TextView android:id="@+id/tvDisclaimer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="#FFF8E1" android:padding="12dp" android:textColor="#667085" android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnNewCheck"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#1769AA"
+            android:text="Start a new check"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
