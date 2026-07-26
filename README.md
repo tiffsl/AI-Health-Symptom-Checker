@@ -36,3 +36,20 @@ Running the Backend
 ```bash
 pip install -r requirements.txt
 python app.py
+
+Dataset
+
+This project uses the Disease Prediction Using Machine Learning dataset from Kaggle.
+
+Dataset:
+https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning
+
+The dataset contains symptom-based disease records used for academic model training and evaluation.
+
+Disclaimer
+
+This application is an academic prototype developed for Capstone Project 2.
+
+It is not intended to provide a medical diagnosis, replace professional medical advice, or be used as an emergency medical service.
+
+Users experiencing severe or potentially life-threatening symptoms should seek professional medical attention immediately.
