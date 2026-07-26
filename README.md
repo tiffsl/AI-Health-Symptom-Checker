@@ -31,7 +31,7 @@ Project Structure
 - `android/` – Android application
 - `backend/` – Flask API and machine-learning model
 
-Running the Backend
+## Running the Backend
 
 ```bash
 pip install -r requirements.txt
